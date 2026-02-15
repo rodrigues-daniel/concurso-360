@@ -1,0 +1,183 @@
+# ============================================================
+# ConcursoPrep — .gitignore
+# ============================================================
+
+# ------------------------------------------------------------
+# RUST / CARGO (backend)
+# ------------------------------------------------------------
+/target/
+backend/target/
+backend/**/*.rs.bk
+backend/Cargo.lock
+**/*.pdb
+
+# SQLx query cache (gerado pelo sqlx prepare)
+backend/.sqlx/
+
+# Binários compilados
+backend/concurso-prep
+backend/concurso-prep.exe
+
+# ------------------------------------------------------------
+# VARIÁVEIS DE AMBIENTE
+# ------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.staging
+backend/.env
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# ------------------------------------------------------------
+# NODE / NPM (frontend)
+# ------------------------------------------------------------
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.vite/
+frontend/build/
+
+# Logs do npm/yarn/pnpm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Lock files (escolha um e remova os outros do ignore)
+# frontend/package-lock.json
+# frontend/yarn.lock
+# frontend/pnpm-lock.yaml
+
+# ------------------------------------------------------------
+# TYPESCRIPT
+# ------------------------------------------------------------
+frontend/*.tsbuildinfo
+frontend/tsconfig.tsbuildinfo
+
+# ------------------------------------------------------------
+# SISTEMA OPERACIONAL
+# ------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ------------------------------------------------------------
+# EDITORES / IDEs
+# ------------------------------------------------------------
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# JetBrains (CLion, IntelliJ, WebStorm, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+.netrwhist
+Session.vim
+.neoconf.json
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+
+# ------------------------------------------------------------
+# DOCKER
+# ------------------------------------------------------------
+.dockerignore
+docker-compose.override.yml
+
+# ------------------------------------------------------------
+# BANCO DE DADOS / BACKUPS
+# ------------------------------------------------------------
+*.sql.bak
+*.dump
+*.pgdump
+/dumps/
+/backups/
+*.sqlite
+*.sqlite3
+*.db
+
+# ------------------------------------------------------------
+# LOGS
+# ------------------------------------------------------------
+*.log
+logs/
+/log/
+
+# ------------------------------------------------------------
+# COBERTURA DE TESTES
+# ------------------------------------------------------------
+coverage/
+*.lcov
+.nyc_output/
+tarpaulin-report.html
+
+# ------------------------------------------------------------
+# TEMPORÁRIOS / MISCELÂNEA
+# ------------------------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+.cache/
+.temp/
+/tmp/
